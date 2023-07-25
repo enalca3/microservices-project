@@ -1,11 +1,11 @@
 package com.enalcadev.microservicesproject.dto;
 
-import lombok.Builder;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Builder
+@Data
 public class PriceDto {
     private Integer productId;
     private Integer brandId;

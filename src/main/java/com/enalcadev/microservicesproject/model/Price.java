@@ -1,7 +1,7 @@
 package com.enalcadev.microservicesproject.model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
+import lombok.Data;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Builder
+@Data
 @Table(name="prices")
 public class Price implements Serializable {
 
