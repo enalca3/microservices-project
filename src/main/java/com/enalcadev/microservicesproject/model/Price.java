@@ -7,9 +7,8 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
-@Entity
 @Data
+@Entity
 @Table(name="prices")
 public class Price implements Serializable {
 

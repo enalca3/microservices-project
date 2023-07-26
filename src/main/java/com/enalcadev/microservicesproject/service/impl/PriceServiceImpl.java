@@ -8,7 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +27,7 @@ public class PriceServiceImpl implements PriceService {
     }
 
     @Override
-    public List<PriceDto> getPrices(LocalDate date, Integer product, Integer brand) {
+    public List<PriceDto> getPrices(LocalDateTime dateTime, Integer product, Integer brand) {
         List<Price> prices = new ArrayList<>();
 
         priceRepository.findByProductIdAndBrandId(product, brand).forEach(prices::add);

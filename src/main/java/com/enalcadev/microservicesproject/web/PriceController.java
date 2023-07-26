@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:8080")
@@ -21,13 +21,13 @@ public class PriceController {
 
     @GetMapping("/prices")
     public ResponseEntity<List<PriceDto>> getPrices(
-            @RequestParam(required = true) Integer product,
-            @RequestParam(required = true) Integer brand,
-            @RequestParam(required = true) LocalDate date
+            @RequestParam() Integer product,
+            @RequestParam() Integer brand,
+            @RequestParam() LocalDateTime dateTime
             ) {
         try {
 
-            List<PriceDto> pricesDto = priceService.getPrices(date, product, brand);
+            List<PriceDto> pricesDto = priceService.getPrices(dateTime, product, brand);
 
             if (pricesDto.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
