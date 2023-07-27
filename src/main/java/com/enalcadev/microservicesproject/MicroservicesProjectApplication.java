@@ -18,7 +18,7 @@ public class MicroservicesProjectApplication {
 		return new OpenAPI()
 				.info( new Info()
 						.title("Microservices Project")
-						.version("0.0.1")
+						.version("1.0.0")
 						.description("Test microservices with spring boot"));
 	}
 }
