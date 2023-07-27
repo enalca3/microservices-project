@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c903c9e2-e6bb-4717-bd5c-b24a4ec15463" name="Changes" comment="init db, change type for dateTime">
+    <list default="true" id="c903c9e2-e6bb-4717-bd5c-b24a4ec15463" name="Changes" comment="change return type to PriceDto and filter by date">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enalcadev/microservicesproject/MicroservicesProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enalcadev/microservicesproject/MicroservicesProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enalcadev/microservicesproject/service/impl/PriceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enalcadev/microservicesproject/service/impl/PriceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/enalcadev/microservicesproject/MicroservicesProjectApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/enalcadev/microservicesproject/MicroservicesProjectApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -54,7 +54,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -73,6 +73,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Desarrollo/Utils/apache-tomcat-9.0.78/bin/catalina.bat",
@@ -80,7 +82,15 @@
     "settings.editor.selected.configurable": "preferences.externalTools"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MicroservicesProjectApplication">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.enalcadev.microservicesproject.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MicroservicesProjectApplicationTests.getPriceNull">
     <configuration name="MicroservicesProjectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.enalcadev.microservicesproject.MicroservicesProjectApplication" />
       <module name="microservices-project" />
@@ -90,6 +100,69 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroservicesProjectApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="microservices-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enalcadev.microservicesproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enalcadev.microservicesproject" />
+      <option name="MAIN_CLASS_NAME" value="com.enalcadev.microservicesproject.MicroservicesProjectApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroservicesProjectApplicationTests.getPrice1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="microservices-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enalcadev.microservicesproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enalcadev.microservicesproject" />
+      <option name="MAIN_CLASS_NAME" value="com.enalcadev.microservicesproject.MicroservicesProjectApplicationTests" />
+      <option name="METHOD_NAME" value="getPrice1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroservicesProjectApplicationTests.getPrice5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="microservices-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enalcadev.microservicesproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enalcadev.microservicesproject" />
+      <option name="MAIN_CLASS_NAME" value="com.enalcadev.microservicesproject.MicroservicesProjectApplicationTests" />
+      <option name="METHOD_NAME" value="getPrice5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroservicesProjectApplicationTests.getPriceNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="microservices-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.enalcadev.microservicesproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.enalcadev.microservicesproject" />
+      <option name="MAIN_CLASS_NAME" value="com.enalcadev.microservicesproject.MicroservicesProjectApplicationTests" />
+      <option name="METHOD_NAME" value="getPriceNull" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,7 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MicroservicesProjectApplicationTests.getPriceNull" />
+        <item itemvalue="JUnit.MicroservicesProjectApplicationTests" />
+        <item itemvalue="JUnit.MicroservicesProjectApplicationTests.getPrice5" />
         <item itemvalue="Application.MicroservicesProjectApplication" />
+        <item itemvalue="JUnit.MicroservicesProjectApplicationTests.getPrice1" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690359878194</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="change return type to PriceDto and filter by date">
+      <option name="closed" value="true" />
+      <created>1690458999587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690458999587</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +297,18 @@
     <MESSAGE value="install api-doc, add rest api for prices" />
     <MESSAGE value="first execution, rename jpa method and fix modelMapper" />
     <MESSAGE value="init db, change type for dateTime" />
-    <option name="LAST_COMMIT_MESSAGE" value="init db, change type for dateTime" />
+    <MESSAGE value="change return type to PriceDto and filter by date" />
+    <option name="LAST_COMMIT_MESSAGE" value="change return type to PriceDto and filter by date" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/enalcadev/microservicesproject/service/impl/PriceServiceImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

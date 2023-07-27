@@ -29,6 +29,7 @@ public class PriceServiceImpl implements PriceService {
     @Override
     public PriceDto getPrice(LocalDateTime dateTime, Integer product, Integer brand) {
 
+        // Get List of prices by product and brand
         List<Price> prices = new ArrayList<>(priceRepository.findByProductIdAndBrandId(product, brand));
 
         // Filter by start and end date
@@ -43,6 +44,7 @@ public class PriceServiceImpl implements PriceService {
         // Get first element and mapping result
         Optional<PriceDto> priceDtoOptional = filterPrices.stream().findFirst().map(price -> this.modelMapper.map(price, PriceDto.class));
 
+        // If not exists, return null
         return priceDtoOptional.orElse(null);
     }
 }
