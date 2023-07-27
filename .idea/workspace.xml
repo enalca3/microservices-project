@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c903c9e2-e6bb-4717-bd5c-b24a4ec15463" name="Changes" comment="change return type to PriceDto and filter by date">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c903c9e2-e6bb-4717-bd5c-b24a4ec15463" name="Changes" comment="add unit test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/enalcadev/microservicesproject/MicroservicesProjectApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/enalcadev/microservicesproject/MicroservicesProjectApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690458999587</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add unit test">
+      <option name="closed" value="true" />
+      <created>1690462849156</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690462849156</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,17 +304,7 @@
     <MESSAGE value="first execution, rename jpa method and fix modelMapper" />
     <MESSAGE value="init db, change type for dateTime" />
     <MESSAGE value="change return type to PriceDto and filter by date" />
-    <option name="LAST_COMMIT_MESSAGE" value="change return type to PriceDto and filter by date" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/enalcadev/microservicesproject/service/impl/PriceServiceImpl.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unit test" />
   </component>
 </project>
