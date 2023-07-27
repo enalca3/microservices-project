@@ -19,6 +19,6 @@ public class MicroservicesProjectApplication {
 				.info( new Info()
 						.title("Microservices Project")
 						.version("0.0.1")
-						.description("Test microservices with springboot"));
+						.description("Test microservices with spring boot"));
 	}
 }

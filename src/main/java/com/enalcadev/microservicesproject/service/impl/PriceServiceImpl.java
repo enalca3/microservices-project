@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 @Service
 public class PriceServiceImpl implements PriceService {
@@ -27,12 +27,22 @@ public class PriceServiceImpl implements PriceService {
     }
 
     @Override
-    public List<PriceDto> getPrices(LocalDateTime dateTime, Integer product, Integer brand) {
-        List<Price> prices = new ArrayList<>();
+    public PriceDto getPrice(LocalDateTime dateTime, Integer product, Integer brand) {
 
-        priceRepository.findByProductIdAndBrandId(product, brand).forEach(prices::add);
-        // Mapping result
-        return prices.stream().map(price -> this.modelMapper.map(price, PriceDto.class))
-                .collect(Collectors.toList());
+        List<Price> prices = new ArrayList<>(priceRepository.findByProductIdAndBrandId(product, brand));
+
+        // Filter by start and end date
+        List<Price> filterPrices = new ArrayList<>(prices.stream()
+                .filter(price -> dateTime.isBefore(price.getEndDate())
+                        && dateTime.isAfter(price.getStartDate()))
+                .toList());
+
+        // Sort list by priority with Comparator
+        filterPrices.sort((price1, price2) -> price2.getPriority() - price1.getPriority());
+
+        // Get first element and mapping result
+        Optional<PriceDto> priceDtoOptional = filterPrices.stream().findFirst().map(price -> this.modelMapper.map(price, PriceDto.class));
+
+        return priceDtoOptional.orElse(null);
     }
 }
